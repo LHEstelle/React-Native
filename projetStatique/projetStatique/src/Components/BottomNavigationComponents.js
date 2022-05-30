@@ -3,10 +3,10 @@ import { StyleSheet, Text, TextInput, TouchableOpacity, View, Image } from 'reac
 import HomeScreen from '../Screens/HomeScreen';
 import MenuScreen from '../Screens/MenuScreen';
 import { BottomNavigation} from 'react-native-paper';
-import RealisationScreen from '../Screens/RealisationScreen';
 import StackNavigation from '../navigation/StackNavigation'
+import StackNavigationHome from '../navigation/StackNavigationHome';
 
-const HomeRoute = () => <HomeScreen/>
+const HomeRoute = () => <StackNavigationHome/> 
 
 const PanierRoute = () => <Text>Panier</Text>;
 

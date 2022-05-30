@@ -10,7 +10,6 @@ const App = () => {
   return (
     <SafeAreaView style={styles.container}>
       <AppbarComponents/>
- 
       <BottomNavigationComponents/>
     </SafeAreaView>
   )

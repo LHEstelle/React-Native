@@ -5,30 +5,33 @@ import { NavigationContainer } from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 //Nous importons les écrans que nous voulons insérer dans notre stack navigation
 
-import RealisationScreen from '../Screens/RealisationScreen'
-import RealisationDetail from '../Screens/RealisationDetail'
+import HomeScreen from '../Screens/HomeScreen'
+import ContactScreen from '../Screens/ContactScreen'
+import MenuScreen from '../Screens/RealisationDetail'
 
 
 
 
 const Stack = createNativeStackNavigator()
-const NavigationStack = () => {
+const StackNavigationHome = () => {
   return (
     //Nous englobons la navigation dans un NavigationContainer
     <NavigationContainer>
       {/* Nous créeons un Stack Navigator qui contiendra les deux écrans que nous voulons affiché en stack */}
       <Stack.Navigator
+      initialRouteName="accueil"
         //Nous lui passons une options pour cacher le header
         screenOptions={{
           headerShown: false,
         }}
       >
         {/* Par défaut c'est le premier screen qui sera afficher */}
-        <Stack.Screen name="réalisations" component={RealisationScreen} />
-        <Stack.Screen name="detail" component={RealisationDetail} />
+        <Stack.Screen name="accueil" component={HomeScreen} />
+        <Stack.Screen name="menu" component={MenuScreen} />
+        <Stack.Screen name="contact" component={ContactScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   )
 }
 
-export default NavigationStack
+export default StackNavigationHome

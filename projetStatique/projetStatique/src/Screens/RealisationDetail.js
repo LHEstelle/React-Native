@@ -1,14 +1,15 @@
 import { Icon } from '@rneui/themed';
 import * as React from 'react';
 import { StyleSheet, Text, Image, View, ImageBackground, TouchableOpacity, ScrollView } from 'react-native';
-import { useNavigation } from '@react-navigation/core'
+
 import { Avatar, Button, Card, Title, Paragraph } from 'react-native-paper';
 
 
 
 const MenuScreen = () => {
     //Nous instancions une variable navigation au HOOK useNavigation de react-navigation
-    const navigation = useNavigation()
+
+    
     return (
         <ScrollView>
             <ImageBackground source={require('../../assets/fond.jpg')} style={{ height: '100%', width: '100%' }} >
